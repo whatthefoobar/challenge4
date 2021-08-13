@@ -1,0 +1,153 @@
+/* --font-secondary: 'Big Shoulders Display', cursive; */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--color-light-gray);
+}
+
+img {
+  width: 100%;
+}
+
+/* section{
+  height: 50vh;
+} makes it worse */
+header {
+  margin: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-logo {
+  width: 7rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.s1 .s1__intro-text {
+  text-align: center;
+  margin: 4rem 0;
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.s1 .s1__intro-text .title {
+  color: #38384d;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.s1 .s1__intro-text p {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #87879D;
+}
+
+.s1 .s1__intro-text .btn {
+  background-color: cadetblue;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+  padding: 1rem 1.3rem;
+  border-radius: 50px;
+}
+
+.s1 .s1__intro-text .btn1 {
+  background-color: #8f42ae;
+}
+
+.s1 .s1__intro-text .btn2 {
+  background-color: #0a9099;
+}
+
+.s1__img-box {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.s1 .separator {
+  margin-top: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3rem;
+  /*margin: 0 auto; */
+}
+
+.s2 {
+  position: relative;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.s2 .s2__card-container {
+  margin-top: 64px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: (minmax(150px, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+}
+
+.s2 .s2__card-container .card img {
+  width: 100%;
+}
+
+.s2 .s2__text {
+  text-align: center;
+  padding: 2rem;
+}
+
+.s2 .separator {
+  margin-top: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3rem;
+  /*margin: 0 auto; */
+}
+
+s3 {
+  position: relative;
+}
+
+s3__text-box {
+  position: absolute;
+  z-index: 100;
+}
+/*# sourceMappingURL=style.css.map */
