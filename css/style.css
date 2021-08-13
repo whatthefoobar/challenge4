@@ -60,6 +60,15 @@ p {
   font-weight: 500;
 }
 
+@media (min-width: 1200px) {
+  .s1__intro-text {
+    position: relative;
+    top: -45vh;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
 .s1__intro-text .title {
   color: #333;
   font-size: 3rem;

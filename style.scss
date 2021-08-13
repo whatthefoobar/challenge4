@@ -16,6 +16,7 @@ mobile: 480px,// done
 tablet: 768px,//done
 tablet-land: 800px,
 desktop: 1200px,
+large-desktop:1400px;
 );
 
 @mixin query($screen){
@@ -92,6 +93,21 @@ width:100%;
    text-decoration: none;
    font-family: $font-primary;
    font-weight: 500;
+
+   @include query(large-desktop){
+    position: relative;
+    top:-75vh;
+    max-width: 500px;
+    margin: 0 auto;//not sure how to make this work
+  }
+
+   @include query(desktop){
+      position: relative;
+      top:-45vh;
+      max-width: 500px;
+      margin: 0 auto;
+     }
+ 
 
   .title{
     // color: rgb(56, 56, 77);
