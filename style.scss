@@ -28,10 +28,10 @@ large-desktop:1400px
   }
 }
 }
-@mixin btn {
+@mixin btn($width, $value) {
   text-decoration: none;
   color: $color-white;
-  width: 12rem;
+  #{$width}: $value;
   font-size: 1.2rem;
   padding: 1.3rem 0rem;
   border-radius: 50px;
@@ -88,7 +88,7 @@ width:100%;
 .s1{
   &__intro-text{
    text-align: center;
-   margin: 4rem 0;
+   margin: 2rem 0;
    font-size: 1.6rem;
    text-decoration: none;
    font-family: $font-primary;
@@ -99,7 +99,6 @@ width:100%;
     top:-75vh;
     max-width: 500px;
     margin: 0 auto;//not sure how to make this work
-    margin-bottom: none;
   }
 
    @include query(desktop){
@@ -108,6 +107,7 @@ width:100%;
       max-width: 500px;
       margin: 0 auto;
      }
+    
  
 
   .title{
@@ -143,12 +143,12 @@ width:100%;
 
 
 .btn1{
-  @include btn;
+  @include btn(width, 12rem);
   background-color:  $color-light-violet;
 }
 
 .btn2{
-  @include btn;
+  @include btn(width, 12rem);
   background-color: $color-light-cyan;
 }
 &__img-box{
@@ -157,19 +157,16 @@ width:100%;
   object-fit: contain;
 }
 .separator{
-  margin-top: 110px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
 
-  @include query(desktop){
-    margin-top: 0;
-  }
-
-  @include query(large-desktop){
+  @include query(tablet){
     margin-top: 0;
   }
 
 }
+
 }
 
 
@@ -206,6 +203,7 @@ position: relative;
 .s2__text{
   text-align: center;
   padding: 2rem;
+
   
   h3{
     color:$color-light-cyan;
@@ -223,7 +221,7 @@ position: relative;
   }
  }
  .separator{
-  margin-top: 50px;
+  // margin-top: 50px;
   display: flex;
   justify-content: center;
   z-index: 100;
@@ -247,6 +245,7 @@ margin: 2rem 0;
 }
 
 &__text-box{
+  
   text-align: center;
   position: absolute;
   top: 50%;
@@ -255,22 +254,37 @@ margin: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
  
+  @include query(desktop){
+    width: 75%;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+
+  }
   
+
   h2{
     margin-top: 6rem;
     font-size: 2.3rem;
+    @include query(tablet){
+      margin-top: 0;
+    }
   }
 
-  p{
+  p {
     font-size: 1.2rem;
   }
+
   .btn3{
-    @include btn;
+    @include btn(width, 12rem);
     background-color:  $color-light-violet;
-  }
+
+    @include query(desktop){
+      @include btn(width, 27rem);
+   }
+  
+   }
 }
 }
-
-
