@@ -16,7 +16,7 @@ mobile: 480px,// done
 tablet: 768px,//done
 tablet-land: 800px,
 desktop: 1200px,
-large-desktop:1400px;
+large-desktop:1400px
 );
 
 @mixin query($screen){
@@ -99,6 +99,7 @@ width:100%;
     top:-75vh;
     max-width: 500px;
     margin: 0 auto;//not sure how to make this work
+    margin-bottom: none;
   }
 
    @include query(desktop){
@@ -159,6 +160,14 @@ width:100%;
   margin-top: 110px;
   display: flex;
   justify-content: center;
+
+  @include query(desktop){
+    margin-top: 0;
+  }
+
+  @include query(large-desktop){
+    margin-top: 0;
+  }
 
 }
 }
@@ -228,11 +237,11 @@ position: relative;
 position: relative;
 text-align: center;
 color: white;
-margin-bottom: 2rem;
+margin: 2rem 0;
 
 .footer-bg img{
   width: 100%;
-  min-height: 100vh;
+  min-height: 60vh;
   // z-index: 99;
 
 }
@@ -247,18 +256,18 @@ margin-bottom: 2rem;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+ 
   
   h2{
-    margin-top: 7rem;
-   font-size: 2.3rem;
+    margin-top: 6rem;
+    font-size: 2.3rem;
   }
 
   p{
     font-size: 1.2rem;
   }
   .btn3{
-    
-    @include btn;//make btn mixin
+    @include btn;
     background-color:  $color-light-violet;
   }
 }
