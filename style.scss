@@ -65,7 +65,7 @@ width:7rem;
 
 }
 .container{
-max-width: 1200px;
+max-width: 1100px;
 margin:0 auto;
 
 //  @include query(tablet){
@@ -109,7 +109,6 @@ width:100%;
      }
     
  
-
   .title{
     // color: rgb(56, 56, 77);
     color:$color-dark-gray;
@@ -119,9 +118,9 @@ width:100%;
     padding: 1rem;
   }
 
-  & p {
-    margin: 1.2rem 0;
-    padding: 1rem;
+  & p{
+    margin: 2.5rem auto;
+    max-width:500px;
     font-weight: 400;
     color:$color-transparent-blue;
     
@@ -135,21 +134,27 @@ width:100%;
   align-items: center;
   gap: 3px;
 
+
   @include query(tablet-land){
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 0;
   }
 }
 
 
 .btn1{
   @include btn(width, 12rem);
-  background-color:  $color-light-violet;
+  background-color: $color-light-cyan;
+}
+
+.contrast-color{
+  color: lighten($color-light-cyan, 40%);
 }
 
 .btn2{
   @include btn(width, 12rem);
-  background-color: $color-light-cyan;
+  background-color:  $color-light-violet;
 }
 &__img-box{
   width: 100%;
@@ -220,12 +225,14 @@ position: relative;
   h2{
     font-weight: 700;
     color:$color-dark-gray;
-    margin: 1.2rem;
+    margin: 2.5rem;
     line-height: 39px;
     
   }
   p{
     color: $color-light-gray-2;
+    margin: 2.5rem auto;;
+    max-width: 500px;;
   }
  }
  .separator{
@@ -288,6 +295,10 @@ margin: 2rem 0;
   .btn3{
     @include btn(width, 12rem);
     background-color:  $color-light-violet;
+
+    .contrast-color{
+      color: lighten($color-light-violet, 40%);
+    }
 
     @include query(desktop){
       @include btn(width, 27rem);
