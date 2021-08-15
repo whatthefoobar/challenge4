@@ -175,11 +175,11 @@ width:100%;
 position: relative;
 
 .s2__card-container{
-  margin-top: 3.2rem;
+  margin-top: 2.5rem;
   padding: 2rem;
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(2, minmax(9rem,1fr));
+  grid-template-columns: repeat(2, minmax(10rem,1fr));
   grid-template-rows: repeat(2, 1fr);
   column-gap: 20px;
   row-gap: 20px;
@@ -189,11 +189,19 @@ position: relative;
   }
 
   @include query(desktop){
-    grid-template-columns: repeat(4, minmax(13rem,1fr));
+    grid-template-columns: repeat(4, minmax(16rem,1fr));
     grid-template-rows: none;
-    column-gap: 2.5rem;
+    column-gap: 1rem;
     justify-items: center;
   }
+
+  // @include query(tablet){
+  //   grid-template-columns: repeat(2, minmax(19rem,1fr));
+  //   grid-template-rows: none;
+  //   column-gap: 1rem;
+  //   justify-items: center;
+    
+  // }
   
   .card img {
     width: 100%;
